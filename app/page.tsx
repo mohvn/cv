@@ -3,7 +3,7 @@ import BlurFade from "@/components/ui/blur-fade";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] text-zinc-900">
       <header className="flex items-center gap-4 mt-28">
         <BlurFade delay={0.25} inView>
           <img src="https://avatars.githubusercontent.com/u/57570197?v=4" className="aspect-square rounded-lg w-28 h-full" />
