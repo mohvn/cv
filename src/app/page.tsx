@@ -191,11 +191,10 @@ export default function Page() {
                   Eu gosto de criar coisas
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Durante meu tempo na universidade, participei de{" "}
-                  {DATA.hackathons.length}+ Eventos. Pessoas de todo a baixada
-                  se reuniriam e criariam coisas incríveis em 1 dia. Foi
-                  enigmático ver as infinitas possibilidades criadas por um grupo
-                  de indivíduos motivados e esforçados.
+                  Participante de diversos eventos. Pessoas de toda
+                  a baixada se reuniriam e criariam coisas incríveis em 1 dia.
+                  Foi enigmático ver as infinitas possibilidades criadas por um
+                  grupo de indivíduos motivados e esforçados.
                 </p>
               </div>
             </div>
