@@ -81,7 +81,7 @@ export const DATA = {
       badges: [],
       location: "Presencial",
       title: "Técnico Help Desk",
-      logoUrl: "/static/images/bnx.png",
+      logoUrl: "static/images/bnx.png",
       start: "Jun 2023",
       end: "Atual",
       description:
@@ -149,7 +149,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/static/images/sistemaabelha.png",
+      image: "static/images/sistemaabelha.png",
       video: "",
     },
     {
@@ -163,7 +163,7 @@ export const DATA = {
         "PHP",
         "Bootstrap",
       ],
-      image: "/static/images/lojaodobras.png",
+      image: "static/images/lojaodobras.png",
       links: [],
     },
     {
@@ -190,7 +190,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/static/images/sdswiki.png",
+      image: "static/images/sdswiki.png",
     },
     {
       title: "sttp - Página Inicial Dinâmica",
@@ -216,7 +216,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/static/images/sttp.png",
+      image: "static/images/sttp.png",
     },
   ],
   hackathons: [
@@ -226,7 +226,7 @@ export const DATA = {
       location: "Santos, SP",
       description:
         "Participei da squad de Dados no desenvolvimento de um sistema de monitoramento de Outliers dos indicadores ODS para a Prefeitura Municipal de Santos. O evento reuniu equipes multidisciplinares (Front-End, Back-End, Dados, UI/UX, DevOps e Metodologias Ágeis) com o desafio de entregar uma solução completa em apenas um dia. O projeto foi concluído com sucesso, demonstrando a importância do trabalho em equipe e da capacidade de resolver problemas sob pressão.",
-      image: "/static/images/etis.png",
+      image: "static/images/etis.png",
       mlh: "",
       links: [],
     },
