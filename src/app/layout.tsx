@@ -1,6 +1,5 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
@@ -10,20 +9,19 @@ const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
-
 export const metadata: Metadata = {
-  metadataBase: new URL(DATA.url),
+  metadataBase: new URL("https://mohvn.github.io/cv"),
   title: {
-    default: DATA.name,
-    template: `%s | ${DATA.name}`,
+    default: "Mohan Elias",
+    template: `%s | Mohan Elias`,
   },
-  description: DATA.description,
+  description: "Desenvolvedor de Software com experiência em desenvolvimento web e automação de processos. Especializado em Python, JavaScript, TypeScript e PHP.",
   openGraph: {
-    title: `${DATA.name}`,
-    description: DATA.description,
-    url: DATA.url,
-    siteName: `${DATA.name}`,
-    locale: "en_US",
+    title: "Mohan Elias",
+    description: "Desenvolvedor de Software com experiência em desenvolvimento web e automação de processos. Especializado em Python, JavaScript, TypeScript e PHP.",
+    url: "https://mohanelias.com.br",
+    siteName: "Mohan Elias",
+    locale: "pt_BR",
     type: "website",
   },
   robots: {
@@ -38,7 +36,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: `${DATA.name}`,
+    title: "Mohan Elias",
     card: "summary_large_image",
   },
   verification: {
@@ -53,7 +51,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
