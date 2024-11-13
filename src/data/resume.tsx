@@ -117,9 +117,25 @@ export const DATA = {
       end: "2022",
     },
     {
+      school: "SOS - Tecnologia e Educação",
+      href: "https://sos.com.br/",
+      degree: "Programação de Computadores",
+      logoUrl: "/static/images/sos.jpg",
+      start: "2016",
+      end: "2017",
+    },
+    {
+      school: "SOS - Tecnologia e Educação",
+      href: "https://sos.com.br/",
+      degree: "Técnico em Informática",
+      logoUrl: "/static/images/sos.jpg",
+      start: "2016",
+      end: "2016",
+    }, ,
+    {
       school: "CCAA",
       href: "https://ccaa.com.br/",
-      degree: "Inglês",
+      degree: "Proeficiência em Inglês",
       logoUrl: "/static/images/ccaa.png",
       start: "2011",
       end: "2019",
@@ -226,8 +242,46 @@ export const DATA = {
       description:
         "Participei da squad de Dados no desenvolvimento de um sistema de monitoramento de Outliers dos indicadores ODS para a Prefeitura Municipal de Santos. O evento reuniu equipes multidisciplinares (Front-End, Back-End, Dados, UI/UX, DevOps e Metodologias Ágeis) com o desafio de entregar uma solução completa em apenas um dia. O projeto foi concluído com sucesso, demonstrando a importância do trabalho em equipe e da capacidade de resolver problemas sob pressão.",
       image: "/static/images/etis.png",
-      mlh: "",
-      links: [],
+      mlh: false,
+      links: [
+        {
+          type: "Website",
+          href: "https://www.linkedin.com/posts/mohanelias_no-%C3%BAltimo-s%C3%A1bado-tive-a-oportunidade-de-ugcPost-7223654688749981700-yYA_?utm_source=share&utm_medium=member_desktop",
+          icon: <Icons.linkedin className="size-3" />,
+        },
+      ],
+    },
+    {
+      title: "CodeDojo 2024",
+      dates: "Out 2024",
+      location: "Santos, SP",
+      description:
+        "Participei do Py013 Code Dojo, um evento dinâmico realizado no Parque Tecnológico de Santos pela comunidade Py013 - Baixada Santista. O formato inovador consistiu em desafios de programação resolvidos de forma colaborativa e rotativa, onde cada participante contribuía com código enquanto outros refinavam as soluções. Esta experiência proporcionou não apenas aprendizado técnico, mas também desenvolvimento de habilidades de trabalho em equipe e programação colaborativa.",
+      image: "/static/images/codedojo.png",
+      mlh: false,
+      links: [
+        {
+          type: "Website",
+          href: "https://www.linkedin.com/posts/mohanelias_ol%C3%A1-rede-tive-a-oportunidade-de-participar-activity-7241942990963830785-1Wb-?utm_source=share&utm_medium=member_desktop",
+          icon: <Icons.linkedin className="size-3" />,
+        },
+      ],
+    },
+    {
+      title: "Open Data Day 2024",
+      dates: "Mar 2024",
+      location: "Santos, SP",
+      description:
+        "Participei da organização do Open Data Day 2024 com a comunidade Py013 - Baixada Santista, um evento global que promove o uso de dados abertos. Desenvolvi e apresentei um projeto analisando dados da ANTAQ e CETESB para explorar a relação entre movimentação portuária e qualidade do ar na Baixada Santista. O evento, realizado na Santos Summit, demonstrou o poder do Python na análise de dados e promoveu conscientização sobre dados abertos.",
+      image: "/static/images/opendataday.png",
+      mlh: false,
+      links: [
+        {
+          type: "Website",
+          href: "https://www.linkedin.com/posts/mohanelias_opendataday-python-py013-activity-7172958644102270976-jBcN?utm_source=share&utm_medium=member_desktop",
+          icon: <Icons.linkedin className="size-3" />,
+        },
+      ],
     },
   ],
 } as const;
