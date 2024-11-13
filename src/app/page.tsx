@@ -57,7 +57,7 @@ export default function Page() {
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border">
-                <AvatarImage alt="Mohan Elias" src="/static/images/me.png" />
+                <AvatarImage alt="Mohan Elias" src="static/images/me.png" />
                 <AvatarFallback>ME</AvatarFallback>
               </Avatar>
             </BlurFade>
@@ -82,7 +82,7 @@ export default function Page() {
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 6}>
             <ResumeCard
-              logoUrl="/static/images/freelancer.png"
+              logoUrl="static/images/freelancer.png"
               altText="Freelancer"
               title="Freelancer"
               subtitle="Desenvolvedor de Software"
@@ -95,7 +95,7 @@ export default function Page() {
 
           <BlurFade delay={BLUR_FADE_DELAY * 6.05}>
             <ResumeCard
-              logoUrl="/static/images/bnx.png"
+              logoUrl="static/images/bnx.png"
               altText="BNX"
               title="BNX"
               subtitle="Técnico Help Desk"
@@ -108,7 +108,7 @@ export default function Page() {
 
           <BlurFade delay={BLUR_FADE_DELAY * 6.1}>
             <ResumeCard
-              logoUrl="/static/images/brasilsorriso.png"
+              logoUrl="static/images/brasilsorriso.png"
               altText="Brasil Sorriso"
               title="Brasil Sorriso"
               subtitle="Atendimento ao Cliente"
@@ -128,7 +128,7 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 8}>
             <ResumeCard
               href="https://www.unisantos.br/"
-              logoUrl="/static/images/unisantos.png"
+              logoUrl="static/images/unisantos.png"
               altText="Universidade Católica de Santos"
               title="Universidade Católica de Santos"
               subtitle="Graduação em Análise e Desenvolvimento de Sistemas"
@@ -139,7 +139,7 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 8.05}>
             <ResumeCard
               href="https://etecsp.cps.sp.gov.br/"
-              logoUrl="/static/images/etec.png"
+              logoUrl="static/images/etec.png"
               altText="ETEC - Escola Técnica Estadual de São Paulo"
               title="ETEC - Escola Técnica Estadual de São Paulo"
               subtitle="Técnico em Administração"
@@ -150,7 +150,7 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 8.1}>
             <ResumeCard
               href="https://sos.com.br/"
-              logoUrl="/static/images/sos.jpg"
+              logoUrl="static/images/sos.jpg"
               altText="SOS - Tecnologia e Educação"
               title="SOS - Tecnologia e Educação"
               subtitle="Programação de Computadores"
@@ -161,7 +161,7 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 8.15}>
             <ResumeCard
               href="https://sos.com.br/"
-              logoUrl="/static/images/sos.jpg"
+              logoUrl="static/images/sos.jpg"
               altText="SOS - Tecnologia e Educação"
               title="SOS - Tecnologia e Educação"
               subtitle="Técnico em Informática"
@@ -172,7 +172,7 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 8.2}>
             <ResumeCard
               href="https://ccaa.com.br/"
-              logoUrl="/static/images/ccaa.png"
+              logoUrl="static/images/ccaa.png"
               altText="CCAA"
               title="CCAA"
               subtitle="Proeficiência em Inglês"
@@ -239,7 +239,7 @@ export default function Page() {
                 dates: "Jun 2024 - Atual",
                 description: "Sistema desenvolvido para atualização e otimização de tabelas de imóveis, permitindo o gerenciamento eficiente de dados imobiliários. Implementa funcionalidades de cadastro, edição e consulta de propriedades, além de recursos para análise e acompanhamento do mercado imobiliário.",
                 technologies: ["Next.js", "Typescript", "PostgreSQL", "TailwindCSS", "Mercado Pago", "Shadcn UI"],
-                image: "/static/images/sistemaabelha.png",
+                image: "static/images/sistemaabelha.png",
                 links: [{
                   type: "Website",
                   href: "https://sistema-abelha.com.br/",
@@ -252,7 +252,7 @@ export default function Page() {
                 dates: "Out 2024 - Atual",
                 description: "Sistema backend desenvolvido em PHP para gerenciamento de benefícios alimentação dos funcionários, permitindo que o RH faça o controle, distribuição e acompanhamento dos vales de forma eficiente e automatizada",
                 technologies: ["PHP", "Bootstrap"],
-                image: "/static/images/lojaodobras.png",
+                image: "static/images/lojaodobras.png",
                 links: []
               },
               {
@@ -261,7 +261,7 @@ export default function Page() {
                 dates: "Abr 2023 - Jun - 2023",
                 description: "Plataforma de documentação técnica sobre Software Defined Storage (SDS) desenvolvida com Astro, oferecendo busca rápida e interface minimalista. O conteúdo é gerenciado através de arquivos markdown.",
                 technologies: ["Astro", "Typescript", "TailwindCSS"],
-                image: "/static/images/sdswiki.png",
+                image: "static/images/sdswiki.png",
                 links: [
                   {
                     type: "Website",
@@ -281,7 +281,7 @@ export default function Page() {
                 dates: "Abr 2023 - Atual",
                 description: "Projeto pessoal de desenvolvimento de uma página inicial dinâmica utilizando React, Typescript e TailwindCSS, demonstrando habilidades em desenvolvimento frontend e design responsivo.",
                 technologies: ["React", "Typescript", "TailwindCSS"],
-                image: "/static/images/sttp.png",
+                image: "static/images/sttp.png",
                 links: [
                   {
                     type: "Website",
@@ -342,7 +342,7 @@ export default function Page() {
                   dates: "Junho 2024",
                   location: "Santos, SP",
                   description: "Participei da squad de Dados no desenvolvimento de um sistema de monitoramento de Outliers dos indicadores ODS para a Prefeitura Municipal de Santos. O evento reuniu equipes multidisciplinares (Front-End, Back-End, Dados, UI/UX, DevOps e Metodologias Ágeis) com o desafio de entregar uma solução completa em apenas um dia. O projeto foi concluído com sucesso, demonstrando a importância do trabalho em equipe e da capacidade de resolver problemas sob pressão.",
-                  image: "/static/images/etis.png",
+                  image: "static/images/etis.png",
                   links: [{
                     title: "LinkedIn",
                     href: "https://www.linkedin.com/posts/mohanelias_no-%C3%BAltimo-s%C3%A1bado-tive-a-oportunidade-de-ugcPost-7223654688749981700-yYA_?utm_source=share&utm_medium=member_desktop",
@@ -354,7 +354,7 @@ export default function Page() {
                   dates: "Out 2024",
                   location: "Santos, SP",
                   description: "Participei do Py013 Code Dojo, um evento dinâmico realizado no Parque Tecnológico de Santos pela comunidade Py013 - Baixada Santista. O formato inovador consistiu em desafios de programação resolvidos de forma colaborativa e rotativa, onde cada participante contribuía com código enquanto outros refinavam as soluções. Esta experiência proporcionou não apenas aprendizado técnico, mas também desenvolvimento de habilidades de trabalho em equipe e programação colaborativa.",
-                  image: "/static/images/codedojo.png",
+                  image: "static/images/codedojo.png",
                   links: [{
                     title: "LinkedIn",
                     href: "https://www.linkedin.com/posts/mohanelias_ol%C3%A1-rede-tive-a-oportunidade-de-participar-activity-7241942990963830785-1Wb-?utm_source=share&utm_medium=member_desktop",
@@ -366,7 +366,7 @@ export default function Page() {
                   dates: "Mar 2024",
                   location: "Santos, SP",
                   description: "Participei da organização do Open Data Day 2024 com a comunidade Py013 - Baixada Santista, um evento global que promove o uso de dados abertos. Desenvolvi e apresentei um projeto analisando dados da ANTAQ e CETESB para explorar a relação entre movimentação portuária e qualidade do ar na Baixada Santista. O evento, realizado na Santos Summit, demonstrou o poder do Python na análise de dados e promoveu conscientização sobre dados abertos.",
-                  image: "/static/images/opendataday.png",
+                  image: "static/images/opendataday.png",
                   links: [{
                     title: "LinkedIn",
                     href: "https://www.linkedin.com/posts/mohanelias_opendataday-python-py013-activity-7172958644102270976-jBcN?utm_source=share&utm_medium=member_desktop",
