@@ -1,6 +1,5 @@
 import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
-
 export const DATA = {
   name: "Mohan Elias",
   initials: "M",
@@ -11,7 +10,7 @@ export const DATA = {
     "Desenvolvedor de Software motivado a aplicar minha base técnica e habilidades de resolução de problemas para criar soluções digitais impactantes",
   summary:
     "Apaixonado por tecnologia e com um forte desejo de contribuir para o meu avanço. Sou **estudante de Análise e Desenvolvimento de Sistemas**, mas já carrego comigo uma bagagem de experiências práticas que me permitem ir além da teoria. Como **Freelancer**, desde cedo, busquei colocar meu conhecimento em prática. Atuei, e atuo como freelancer em diversos projetos, desenvolvendo websites e aplicações web completas, desde a criação da interface até a implementação de funcionalidades complexas.",
-  avatarUrl: "static/images/me.png",
+  avatarUrl: "/static/images/me.png",
   skills: [
     "Python",
     "React",
@@ -81,7 +80,7 @@ export const DATA = {
       badges: [],
       location: "Presencial",
       title: "Técnico Help Desk",
-      logoUrl: "static/images/bnx.png",
+      logoUrl: "/static/images/bnx.png",
       start: "Jun 2023",
       end: "Atual",
       description:
@@ -93,7 +92,7 @@ export const DATA = {
       badges: [],
       location: "Presencial",
       title: "Atendimento ao Cliente",
-      logoUrl: "static/images/brasilsorriso.png",
+      logoUrl: "/static/images/brasilsorriso.png",
       start: "Abr 2022",
       end: "Jun 2023",
       description:
@@ -105,7 +104,7 @@ export const DATA = {
       school: "Universidade Católica de Santos",
       href: "https://www.unisantos.br/",
       degree: "Graduação em Análise e Desenvolvimento de Sistemas",
-      logoUrl: "static/images/unisantos.png",
+      logoUrl: "/static/images/unisantos.png",
       start: "2023",
       end: "2024",
     },
@@ -113,7 +112,7 @@ export const DATA = {
       school: "ETEC - Escola Técnica Estadual de São Paulo",
       href: "https://etecsp.cps.sp.gov.br/",
       degree: "Técnico em Administração",
-      logoUrl: "static/images/etec.png",
+      logoUrl: "/static/images/etec.png",
       start: "2021",
       end: "2022",
     },
@@ -121,7 +120,7 @@ export const DATA = {
       school: "CCAA",
       href: "https://ccaa.com.br/",
       degree: "Inglês",
-      logoUrl: "static/images/ccaa.png",
+      logoUrl: "/static/images/ccaa.png",
       start: "2011",
       end: "2019",
     },
@@ -149,7 +148,7 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "static/images/sistemaabelha.png",
+      image: "/static/images/sistemaabelha.png",
       video: "",
     },
     {
@@ -163,7 +162,7 @@ export const DATA = {
         "PHP",
         "Bootstrap",
       ],
-      image: "static/images/lojaodobras.png",
+      image: "/static/images/lojaodobras.png",
       links: [],
     },
     {
@@ -190,7 +189,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "static/images/sdswiki.png",
+      image: "/static/images/sdswiki.png",
     },
     {
       title: "sttp - Página Inicial Dinâmica",
@@ -216,7 +215,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "static/images/sttp.png",
+      image: "/static/images/sttp.png",
     },
   ],
   hackathons: [
@@ -226,7 +225,7 @@ export const DATA = {
       location: "Santos, SP",
       description:
         "Participei da squad de Dados no desenvolvimento de um sistema de monitoramento de Outliers dos indicadores ODS para a Prefeitura Municipal de Santos. O evento reuniu equipes multidisciplinares (Front-End, Back-End, Dados, UI/UX, DevOps e Metodologias Ágeis) com o desafio de entregar uma solução completa em apenas um dia. O projeto foi concluído com sucesso, demonstrando a importância do trabalho em equipe e da capacidade de resolver problemas sob pressão.",
-      image: "static/images/etis.png",
+      image: "/static/images/etis.png",
       mlh: "",
       links: [],
     },
