@@ -39,8 +39,8 @@ export default function Page() {
                     <span className="sr-only">Email</span>
                     <Icons.email className="size-5" />
                   </Link>
-                  <Link href="tel:+5513988417817" className="hover:text-foreground">
-                    <span className="sr-only">Phone</span>
+                  <Link href="https://wa.me/5513988417817" className="hover:text-foreground">
+                    <span className="sr-only">WhatsApp</span>
                     <Icons.phone className="size-5" />
                   </Link>
                   <Link href="https://github.com/mohvn" className="hover:text-foreground">
@@ -71,7 +71,7 @@ export default function Page() {
         </BlurFade>
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            Desenvolvedor de Software com experiência em desenvolvimento web e automação de processos. Especializado em Python, JavaScript, TypeScript e PHP. Atualmente cursando Análise e Desenvolvimento de Sistemas na Universidade Católica de Santos. Possuo experiência em desenvolvimento de soluções completas incluindo interfaces web dinâmicas e interativas, automação de processos, scripts de análise de dados, e integração de sistemas. Foco em criar soluções eficientes e escaláveis utilizando as melhores práticas de desenvolvimento de software.
+            **Desenvolvedor de Software** especializado em **Python**, **JavaScript**, **TypeScript** e **PHP**, com foco em **desenvolvimento web** e **automação**. Cursando **Análise e Desenvolvimento de Sistemas** na Universidade Católica de Santos. Experiência em criar **soluções completas e escaláveis** seguindo as melhores práticas.
           </Markdown>
         </BlurFade>
       </section>
