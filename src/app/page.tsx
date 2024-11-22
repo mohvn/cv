@@ -132,7 +132,7 @@ export default function Page() {
               altText="Universidade Católica de Santos"
               title="Universidade Católica de Santos"
               subtitle="Graduação em Análise e Desenvolvimento de Sistemas"
-              period="2023 - 2024"
+              period="2023 - 2026"
             />
           </BlurFade>
 
@@ -248,7 +248,6 @@ export default function Page() {
               },
               {
                 title: "Gestão Lojão do Brás",
-                href: "https://lojaodoabras.com.br/",
                 dates: "Out 2024 - Atual",
                 description: "Sistema backend desenvolvido em PHP para gerenciamento de benefícios alimentação dos funcionários, permitindo que o RH faça o controle, distribuição e acompanhamento dos vales de forma eficiente e automatizada",
                 technologies: ["PHP", "Bootstrap"],
