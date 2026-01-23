@@ -1,116 +1,139 @@
-import { Badge } from "@/components/ui/badge";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { cn } from "@/lib/utils";
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import Markdown from "react-markdown";
+import { ArrowUpRight, ExternalLink } from "lucide-react";
 
-interface Props {
+interface ProjectCardProps {
   title: string;
-  href?: string;
   description: string;
-  dates: string;
-  tags: readonly string[];
-  link?: string;
-  image?: string;
-  video?: string;
-  links?: readonly {
-    icon: React.ReactNode;
-    type: string;
-    href: string;
-  }[];
-  className?: string;
+  href: string;
+  status?: "building" | "live" | "comingSoon" | "private";
+  backgroundImage?: string;
+  screenshot?: string;
+  comingSoon?: boolean;
 }
 
 export function ProjectCard({
   title,
-  href,
   description,
-  dates,
-  tags,
-  link,
-  image,
-  video,
-  links,
-  className,
-}: Props) {
+  href,
+  status = "live",
+  backgroundImage,
+  screenshot,
+  comingSoon = false,
+}: ProjectCardProps) {
+  const statusConfig = {
+    building: {
+      label: "Building",
+      color: "text-red-500",
+      bgColor: "bg-red-500",
+    },
+    live: {
+      label: "Live",
+      color: "text-green-500",
+      bgColor: "bg-green-500",
+    },
+    comingSoon: {
+      label: "Coming Soon",
+      color: "text-yellow-500",
+      bgColor: "bg-yellow-500",
+    },
+    private: {
+      label: "Private",
+      color: "text-gray-500",
+      bgColor: "bg-gray-500",
+    },
+  };
+
+  const config = statusConfig[status || "live"];
+
   return (
-    <Card
-      className={
-        "flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full"
-      }
-    >
+    <div className="relative z-10 p-3">
       <Link
-        href={href || "#"}
-        className={cn("block cursor-pointer", className)}
+        href={href}
+        className="flex flex-col gap-2 cursor-pointer group w-full"
       >
-        {video && (
-          <video
-            src={video}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
-          />
-        )}
-        {image && (
-          <Image
-            src={image}
-            alt={title}
-            width={500}
-            height={300}
-            className="h-40 w-full overflow-hidden object-cover object-top"
-          />
-        )}
-      </Link>
-      <CardHeader className="px-2">
-        <div className="space-y-1">
-          <CardTitle className="mt-1 text-base">{title}</CardTitle>
-          <time className="font-sans text-xs">{dates}</time>
-          <div className="hidden font-sans text-xs underline print:visible">
-            {link?.replace("https://", "").replace("www.", "").replace("/", "")}
+        <div className="p-[4px] rounded-[12px] border border-gray-300">
+          <div className="relative w-full bg-gray-100 rounded-[8px] border border-gray-300 h-[200px] md:h-[200px] sm:h-[170px] overflow-hidden select-none">
+            {backgroundImage && (
+              <div
+                className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                style={{ backgroundImage: `url(${backgroundImage})` }}
+              />
+            )}
+            {comingSoon && (
+              <h1 className="absolute top-2 left-2 text-xs text-gray-500 group-hover:text-black font-medium transition-all duration-300 group-hover:left-1/2 group-hover:-translate-x-1/2">
+                Coming Soon
+              </h1>
+            )}
+            {screenshot && (
+              <div className="bg-white rounded-t-[6px] absolute bottom-0 left-1/2 -translate-x-1/2 w-[90%] h-[75%] p-[2px] pb-0">
+                <div className="w-full h-full rounded-t-[4px] overflow-hidden">
+                  <Image
+                    alt={`${title} Screenshot`}
+                    src={screenshot}
+                    width={1000}
+                    height={1000}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            )}
           </div>
-          <Markdown className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert">
-            {description}
-          </Markdown>
         </div>
-      </CardHeader>
-      <CardContent className="mt-auto flex flex-col px-2">
-        {tags && tags.length > 0 && (
-          <div className="mt-2 flex flex-wrap gap-1">
-            {tags?.map((tag) => (
-              <Badge
-                className="px-1 py-0 text-[10px]"
-                variant="secondary"
-                key={tag}
-              >
-                {tag}
-              </Badge>
-            ))}
+        <div className="px-2 flex flex-col gap-1">
+          <div className="flex items-center justify-between">
+            <h3 className="text-[1.10rem] leading-[1.10] text-gray-900 font-bold">
+              {title}
+            </h3>
+            <div className="flex items-center gap-1 select-none">
+              {(status === "building" || status === "live") && (
+                <div className="relative flex items-center justify-center w-3.5 h-3.5">
+                  <div
+                    className={`absolute inset-0 m-auto animate-ping group-hover:hidden ${config.bgColor}`}
+                    style={{
+                      width: "10px",
+                      height: "10px",
+                      borderRadius: "50%",
+                      opacity: 0.4,
+                    }}
+                  />
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    strokeWidth="0"
+                    viewBox="0 0 24 24"
+                    className={`relative z-10 ${config.color} w-3.5 h-3.5`}
+                  >
+                    <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z" />
+                  </svg>
+                </div>
+              )}
+              <p className="text-sm text-gray-500 font-medium">{config.label}</p>
+            </div>
           </div>
-        )}
-      </CardContent>
-      <CardFooter className="px-2 pb-2">
-        {links && links.length > 0 && (
-          <div className="flex flex-row flex-wrap items-start gap-1">
-            {links?.map((link, idx) => (
-              <Link href={link?.href} key={idx} target="_blank">
-                <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px]">
-                  {link.icon}
-                  {link.type}
-                </Badge>
-              </Link>
-            ))}
+          <p className="text-sm text-gray-500">{description}</p>
+          <div className="flex items-center gap-1 select-none">
+            <p className="text-sm text-gray-500 transition-colors duration-300 group-hover:text-gray-900">
+              View Project
+            </p>
+            <ArrowUpRight className="text-gray-500 transition-all duration-300 group-hover:rotate-45 group-hover:text-gray-900 w-3.5 h-3.5" />
           </div>
-        )}
-      </CardFooter>
-    </Card>
+        </div>
+      </Link>
+      <div className="block md:hidden">
+        <div
+          className="w-full h-px"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(to right, #CBCCCC 0px, #CBCCCC 6px, transparent 6px, transparent 14px)",
+            backgroundSize: "100% 1px",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+      </div>
+    </div>
   );
 }
