@@ -342,6 +342,40 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
     display: none;
   }
 
+  /* Dot pattern sections: borders drawn on top of dots (no background vertical lines, use overlay instead) */
+  .dashed-border-dots {
+    background-image: none;
+  }
+  .dashed-border-dots::before,
+  .dashed-border-dots::after {
+    z-index: 1;
+  }
+  .dashed-border-vertical-lines-overlay {
+    --border-color: #CBCCCC;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background-image:
+      repeating-linear-gradient(
+        to bottom,
+        var(--border-color) 0px,
+        var(--border-color) 6px,
+        transparent 6px,
+        transparent 14px
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        var(--border-color) 0px,
+        var(--border-color) 6px,
+        transparent 6px,
+        transparent 14px
+      );
+    background-size: 1px 100%, 1px 100%;
+    background-position: 0 0, right 0;
+    background-repeat: repeat-y, repeat-y;
+  }
+
   /* Hide left border when using dashed-border-no-left */
   .dashed-border-no-left {
     background-image: 

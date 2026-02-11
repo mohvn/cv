@@ -7,25 +7,13 @@ export const metadata: Metadata = {
     default: "Mohan Elias",
     template: `%s | Mohan Elias`,
   },
-  description: "Desenvolvedor de Software com experiência em desenvolvimento web e automação de processos. Especializado em Python, JavaScript, TypeScript e PHP.",
+  description: "Hey! I'm Mohan Elias, and this is my portfolio website.",
   openGraph: {
     title: "Mohan Elias",
-    description: "Desenvolvedor de Software com experiência em desenvolvimento web e automação de processos. Especializado em Python, JavaScript, TypeScript e PHP.",
-    url: "https://mohanelias.com.br",
+    description: "Hey! I'm Mohan Elias, and this is my portfolio website.",
     siteName: "Mohan Elias",
-    locale: "pt_BR",
+    locale: "en_US",
     type: "website",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
   },
   twitter: {
     title: "Mohan Elias",

@@ -9,7 +9,6 @@ interface ProjectCardProps {
   description: string;
   href: string;
   status?: "building" | "live" | "comingSoon" | "private";
-  backgroundImage?: string;
   screenshot?: string;
   comingSoon?: boolean;
 }
@@ -19,7 +18,6 @@ export function ProjectCard({
   description,
   href,
   status = "live",
-  backgroundImage,
   screenshot,
   comingSoon = false,
 }: ProjectCardProps) {
@@ -55,31 +53,21 @@ export function ProjectCard({
         className="flex flex-col gap-2 cursor-pointer group w-full"
       >
         <div className="p-[4px] rounded-[12px] border border-gray-300">
-          <div className="relative w-full bg-gray-100 rounded-[8px] border border-gray-300 h-[200px] md:h-[200px] sm:h-[170px] overflow-hidden select-none">
-            {backgroundImage && (
-              <div
-                className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                style={{ backgroundImage: `url(${backgroundImage})` }}
-              />
-            )}
+          <div className="relative w-full aspect-[1200/660] bg-gray-100 rounded-[8px] border border-gray-300 overflow-hidden select-none">
             {comingSoon && (
-              <h1 className="absolute top-2 left-2 text-xs text-gray-500 group-hover:text-black font-medium transition-all duration-300 group-hover:left-1/2 group-hover:-translate-x-1/2">
+              <h1 className="absolute top-2 left-2 z-10 text-xs text-gray-500 group-hover:text-black font-medium transition-all duration-300 group-hover:left-1/2 group-hover:-translate-x-1/2">
                 Coming Soon
               </h1>
             )}
             {screenshot && (
-              <div className="bg-white rounded-t-[6px] absolute bottom-0 left-1/2 -translate-x-1/2 w-[90%] h-[75%] p-[2px] pb-0">
-                <div className="w-full h-full rounded-t-[4px] overflow-hidden">
-                  <Image
-                    alt={`${title} Screenshot`}
-                    src={screenshot}
-                    width={1000}
-                    height={1000}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
+              <Image
+                alt={`${title} Screenshot`}
+                src={screenshot}
+                width={1500}
+                height={1000}
+                className="absolute inset-0 w-full h-full object-contain"
+                loading="lazy"
+              />
             )}
           </div>
         </div>
@@ -115,12 +103,6 @@ export function ProjectCard({
             </div>
           </div>
           <p className="text-sm text-gray-500">{description}</p>
-          <div className="flex items-center gap-1 select-none">
-            <p className="text-sm text-gray-500 transition-colors duration-300 group-hover:text-gray-900">
-              View Project
-            </p>
-            <ArrowUpRight className="text-gray-500 transition-all duration-300 group-hover:rotate-45 group-hover:text-gray-900 w-3.5 h-3.5" />
-          </div>
         </div>
       </Link>
       <div className="block md:hidden">
