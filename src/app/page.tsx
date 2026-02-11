@@ -68,7 +68,6 @@ export default function Page() {
         <div className="absolute inset-0 -z-10">
           <DotPattern width={8} height={8} className="absolute top-0 left-0 w-full h-full opacity-50 pointer-events-none text-neutral-400/80" />
         </div>
-        <div className="dashed-border-vertical-lines-overlay" aria-hidden />
       </div>
       <div className="flex gap-2 dashed-border p-4">
         <Avatar className="size-24 rounded-lg ring-1 ring-gray-300 border-[3px] border-white">
@@ -208,13 +207,7 @@ export default function Page() {
       <div className="flex flex-col gap-2 p-4 dashed-border dashed-border-no-top">
         <div
           className="max-w-[690px] mx-auto relative p-3"
-          style={{
-            backgroundImage: `repeating-linear-gradient(to bottom, #CBCCCC 0px, #CBCCCC 6px, transparent 6px, transparent 14px),
-              repeating-linear-gradient(to bottom, #CBCCCC 0px, #CBCCCC 6px, transparent 6px, transparent 14px)`,
-            backgroundSize: "1px 100%, 1px 100%",
-            backgroundPosition: "left top, right top",
-            backgroundRepeat: "no-repeat",
-          }}
+
         >
           <div className="flex flex-wrap items-center justify-center gap-2">
             {skills.map((skill) => {

@@ -252,6 +252,29 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
     transition: none !important;
   }
 
+  /* Vertical dashed lines only on the central content column (not viewport edges) */
+  .dashed-border-vertical-content {
+    --border-color: #CBCCCC;
+    background-image:
+      repeating-linear-gradient(
+        to bottom,
+        var(--border-color) 0px,
+        var(--border-color) 6px,
+        transparent 6px,
+        transparent 14px
+      ),
+      repeating-linear-gradient(
+        to bottom,
+        var(--border-color) 0px,
+        var(--border-color) 6px,
+        transparent 6px,
+        transparent 14px
+      );
+    background-size: 1px 100%, 1px 100%;
+    background-position: 0 0, right 0;
+    background-repeat: repeat-y, repeat-y;
+  }
+
   .dashed-border {
     --border-color: #CBCCCC;
     position: relative;
@@ -304,32 +327,9 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
     z-index: -1;
   }
 
-  /* Create vertical dashed borders using background that extend to page edges */
+  /* Horizontal lines only on sections; vertical lines are on content wrapper via .dashed-border-vertical-content */
   .dashed-border {
-    background-image: 
-      repeating-linear-gradient(
-        to bottom,
-        var(--border-color) 0px,
-        var(--border-color) 6px,
-        transparent 6px,
-        transparent 14px
-      ),
-      repeating-linear-gradient(
-        to bottom,
-        var(--border-color) 0px,
-        var(--border-color) 6px,
-        transparent 6px,
-        transparent 14px
-      );
-    background-size: 1px 100vh, 1px 100vh;
-    background-position: 0 0, right 0;
-    background-repeat: repeat-y, repeat-y;
-    background-attachment: fixed;
-  }
-  
-  /* For body element, ensure vertical borders are visible at viewport edges */
-  body.dashed-border {
-    background-position: 0 0, calc(100vw - 1px) 0;
+    background-image: none;
   }
 
   /* Hide top border when using dashed-border-no-top */
@@ -376,36 +376,9 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
     background-repeat: repeat-y, repeat-y;
   }
 
-  /* Hide left border when using dashed-border-no-left */
-  .dashed-border-no-left {
-    background-image: 
-      repeating-linear-gradient(
-        to bottom,
-        var(--border-color) 0px,
-        var(--border-color) 6px,
-        transparent 6px,
-        transparent 14px
-      );
-    background-size: 1px 100vh;
-    background-position: right 0 top 0;
-    background-repeat: repeat-y;
-    background-attachment: fixed;
-  }
-
-  /* Hide right border when using dashed-border-no-right */
+  .dashed-border-no-left,
   .dashed-border-no-right {
-    background-image: 
-      repeating-linear-gradient(
-        to bottom,
-        var(--border-color) 0px,
-        var(--border-color) 6px,
-        transparent 6px,
-        transparent 14px
-      );
-    background-size: 1px 100vh;
-    background-position: left 0 top 0;
-    background-repeat: repeat-y;
-    background-attachment: fixed;
+    background-image: none;
   }
   
   .dashed-border-vertical {
@@ -421,121 +394,13 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
     background-repeat: no-repeat;
   }
 
-  /* Classes para desabilitar lados específicos */
+  /* Classes para desabilitar lados específicos (vertical lines are on viewport via body) */
   .dashed-border-no-top {
-    --border-color: #CBCCCC;
-    background-image: 
-      repeating-linear-gradient(
-        to right,
-        var(--border-color) 0px,
-        var(--border-color) 6px,
-        transparent 6px,
-        transparent 14px
-      ),
-      repeating-linear-gradient(
-        to bottom,
-        var(--border-color) 0px,
-        var(--border-color) 6px,
-        transparent 6px,
-        transparent 14px
-      ),
-      repeating-linear-gradient(
-        to bottom,
-        var(--border-color) 0px,
-        var(--border-color) 6px,
-        transparent 6px,
-        transparent 14px
-      );
-    background-size: 100% 1px, 1px 100%, 1px 100%;
-    background-position: bottom, right, left;
-    background-repeat: repeat-x, repeat-y, repeat-y;
-  }
-
-  .dashed-border-no-right {
-    --border-color: #CBCCCC;
-    background-image: 
-      repeating-linear-gradient(
-        to right,
-        var(--border-color) 0px,
-        var(--border-color) 6px,
-        transparent 6px,
-        transparent 14px
-      ),
-      repeating-linear-gradient(
-        to right,
-        var(--border-color) 0px,
-        var(--border-color) 6px,
-        transparent 6px,
-        transparent 14px
-      ),
-      repeating-linear-gradient(
-        to bottom,
-        var(--border-color) 0px,
-        var(--border-color) 6px,
-        transparent 6px,
-        transparent 14px
-      );
-    background-size: 100% 1px, 100% 1px, 1px 100%;
-    background-position: top, bottom, left;
-    background-repeat: repeat-x, repeat-x, repeat-y;
+    background-image: none;
   }
 
   .dashed-border-no-bottom {
-    --border-color: #CBCCCC;
-    background-image: 
-      repeating-linear-gradient(
-        to right,
-        var(--border-color) 0px,
-        var(--border-color) 6px,
-        transparent 6px,
-        transparent 14px
-      ),
-      repeating-linear-gradient(
-        to bottom,
-        var(--border-color) 0px,
-        var(--border-color) 6px,
-        transparent 6px,
-        transparent 14px
-      ),
-      repeating-linear-gradient(
-        to bottom,
-        var(--border-color) 0px,
-        var(--border-color) 6px,
-        transparent 6px,
-        transparent 14px
-      );
-    background-size: 100% 1px, 1px 100%, 1px 100%;
-    background-position: top, right, left;
-    background-repeat: repeat-x, repeat-y, repeat-y;
-  }
-
-  .dashed-border-no-left {
-    --border-color: #CBCCCC;
-    background-image: 
-      repeating-linear-gradient(
-        to right,
-        var(--border-color) 0px,
-        var(--border-color) 6px,
-        transparent 6px,
-        transparent 14px
-      ),
-      repeating-linear-gradient(
-        to right,
-        var(--border-color) 0px,
-        var(--border-color) 6px,
-        transparent 6px,
-        transparent 14px
-      ),
-      repeating-linear-gradient(
-        to bottom,
-        var(--border-color) 0px,
-        var(--border-color) 6px,
-        transparent 6px,
-        transparent 14px
-      );
-    background-size: 100% 1px, 100% 1px, 1px 100%;
-    background-position: top, bottom, right;
-    background-repeat: repeat-x, repeat-x, repeat-y;
+    background-image: none;
   }
 
   .dot-pattern {

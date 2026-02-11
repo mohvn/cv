@@ -88,7 +88,6 @@ export default async function ProjectPage({
         <div className="absolute inset-0 -z-10">
           <DotPattern width={8} height={8} className="absolute top-0 left-0 w-full h-full opacity-50 pointer-events-none text-neutral-400/80" />
         </div>
-        <div className="dashed-border-vertical-lines-overlay" aria-hidden />
       </div>
       {/* Header */}
       <div
@@ -118,7 +117,6 @@ export default async function ProjectPage({
         style={dashedVerticalStyle}
       >
         <div className="flex flex-col items-start">
-          {/* Image / Video area */}
           <div className="px-4 w-full p-4">
             <div className="w-full h-full md:min-h-[340px] min-h-[200px] rounded-[12px] relative border border-gray-300 p-[4px] overflow-hidden">
               {project.buildingGif ? (
@@ -225,7 +223,6 @@ export default async function ProjectPage({
             <div className="w-full h-px" style={dashedHorizontalStyle} />
           </div>
 
-          {/* Title, status, description */}
           <div className="flex flex-col w-full gap-1.5 p-4">
             <div className="flex items-center justify-between">
               <h1 className="text-[1.40rem] font-bold leading-tight text-gray-900">
@@ -268,7 +265,6 @@ export default async function ProjectPage({
 
           <div className="w-full h-px" style={dashedHorizontalStyle} />
 
-          {/* Stack used */}
           <div className="flex font-semibold text-gray-900 flex-col gap-2.5 px-4 pt-4 pb-5 w-full">
             <h2 className="text-base font-bold">Stack used</h2>
             <div className="flex flex-wrap items-center gap-1.5">
@@ -312,7 +308,6 @@ export default async function ProjectPage({
         <div className="absolute inset-0 -z-10">
           <DotPattern width={8} height={8} className="absolute top-0 left-0 w-full h-full opacity-50 pointer-events-none text-neutral-400/80" />
         </div>
-        <div className="dashed-border-vertical-lines-overlay" aria-hidden />
       </div>
     </div>
   );
