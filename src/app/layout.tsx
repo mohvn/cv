@@ -34,12 +34,10 @@ export default function RootLayout({
     <html lang="pt-BR" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased flex flex-col gap-4 overflow-x-hidden"
+          "min-h-screen bg-background font-sans antialiased max-w-[700px] mx-auto flex flex-col gap-4"
         )}
       >
-        <div className="w-full max-w-[700px] mx-auto flex flex-col gap-4 flex-1 dashed-border-vertical-content">
-          {children}
-        </div>
+        {children}
       </body>
     </html>
   );

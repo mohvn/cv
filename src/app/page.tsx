@@ -1,64 +1,12 @@
-import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { WordRotate } from "@/components/ui/word-rotate";
 import { Socials } from "@/components/socials";
 import { GitHubActivityCalendar } from "@/components/github-activity-calendar";
 import { DotPattern } from "@/components/ui/dot-pattern";
 import { QuoteIcon } from "@/components/icons/quote";
-import { RiNextjsFill } from "@/components/icons/nextjs";
-import { MdiReact } from "@/components/icons/react";
-import { MdiTailwind } from "@/components/icons/tailwind";
-import { AkarIconsPythonFill } from "@/components/icons/python";
-import { DeviconPlainPhp } from "@/components/icons/php";
-import { LineiconsAstro } from "@/components/icons/astro";
 import { Badge } from "@/components/ui/badge";
 import { ExperienceCard } from "@/components/experience-card";
 import { ProjectCard } from "@/components/project-card";
-import { RiJavascriptFill } from "@/components/icons/javascript";
-import { LineiconsTypescript } from "@/components/icons/typescript";
-import { AkarIconsNodeFill } from "@/components/icons/node";
-import { MdiGit } from "@/components/icons/git";
-import { MdiGithub } from "@/components/icons/github";
-import { SolarFigmaBold } from "@/components/icons/figma";
-import { SimpleIconsBun } from "@/components/icons/bun";
-import { UilLinux } from "@/components/icons/linux";
-import { LineiconsPostman } from "@/components/icons/postman";
-
-
-const skillIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-  "Next.js": RiNextjsFill,
-  React: MdiReact,
-  Tailwind: MdiTailwind,
-  Python: AkarIconsPythonFill,
-  PHP: DeviconPlainPhp,
-  Astro: LineiconsAstro,
-  JavaScript: RiJavascriptFill,
-  TypeScript: LineiconsTypescript,
-  Node: AkarIconsNodeFill,
-  Git: MdiGit,
-  GitHub: MdiGithub,
-  Figma: SolarFigmaBold,
-  Bun: SimpleIconsBun,
-  Linux: UilLinux,
-  Postman: LineiconsPostman,
-};
-
-const skills: { name: string; href: string }[] = [
-  { name: "React", href: "https://www.google.com/search?q=React+JS+JavaScript+library" },
-  { name: "Next.js", href: "https://www.google.com/search?q=Next.js+React+framework" },
-  { name: "Tailwind", href: "https://www.google.com/search?q=Tailwind+CSS+framework" },
-  { name: "Astro", href: "https://astro.build" },
-  { name: "Python", href: "https://www.google.com/search?q=Python+programming+language" },
-  { name: "JavaScript", href: "https://www.google.com/search?q=JavaScript+programming+language" },
-  { name: "TypeScript", href: "https://www.google.com/search?q=TypeScript+programming+language" },
-  { name: "Node", href: "https://www.google.com/search?q=Node.js+JavaScript+runtime" },
-  { name: "Git", href: "https://www.google.com/search?q=Git+version+control" },
-  { name: "GitHub", href: "https://www.google.com/search?q=GitHub+code+hosting+platform" },
-  { name: "Figma", href: "https://www.google.com/search?q=Figma+design+tool" },
-  { name: "Bun", href: "https://www.google.com/search?q=Bun+JavaScript+runtime" },
-  { name: "Linux", href: "https://www.google.com/search?q=Linux+operating+system" },
-  { name: "Postman", href: "https://www.google.com/search?q=Postman+API+testing+tool" },
-];
 
 export default function Page() {
 
@@ -68,6 +16,7 @@ export default function Page() {
         <div className="absolute inset-0 -z-10">
           <DotPattern width={8} height={8} className="absolute top-0 left-0 w-full h-full opacity-50 pointer-events-none text-neutral-400/80" />
         </div>
+        <div className="dashed-border-vertical-lines-overlay" aria-hidden />
       </div>
       <div className="flex gap-2 dashed-border p-4">
         <Avatar className="size-24 rounded-lg ring-1 ring-gray-300 border-[3px] border-white">
@@ -85,7 +34,7 @@ export default function Page() {
 
       <div className="flex flex-col gap-2 dashed-border dashed-border-no-top p-4">
         <p>Hello! I'm Mohan, a software developer passionate about turning ideas into simple, beautiful, and functional digital solutions. I focus on delivering projects where usability and user experience come first, always striving for clean and efficient code.</p>
-        <p>Tech stack isn't my concern, I'm flexible with whatever the project needs, though I prefer modern frameworks and tools. I'm always open for new opportunities to learn and grow.</p>
+        <p>I have experience with a variety of modern technologies and frameworks—I believe every project deserves the right tools. I'm always looking for new challenges and opportunities to learn and grow alongside the industry.</p>
 
         <p>Here are my <span className="font-bold">socials</span></p>
 
@@ -205,33 +154,10 @@ export default function Page() {
       </div>
 
       <div className="flex flex-col gap-2 p-4 dashed-border dashed-border-no-top">
-        <div
-          className="max-w-[690px] mx-auto relative p-3"
-
-        >
-          <div className="flex flex-wrap items-center justify-center gap-2">
-            {skills.map((skill) => {
-              const Icon = skillIcons[skill.name];
-              return (
-                <a
-                  key={skill.name}
-                  href={skill.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative flex min-w-fit cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-[8px] border border-gray-300 bg-transparent px-2 py-1 text-gray-500 transition-all duration-300 hover:border-gray-500 hover:bg-gray-50 hover:text-gray-700 select-none"
-                >
-                  {Icon ? (
-                    <Icon className="size-4 shrink-0" aria-hidden />
-                  ) : null}
-                  <span className="text-sm font-medium whitespace-nowrap">
-                    {skill.name}
-                  </span>
-                </a>
-              );
-            })}
-          </div>
+        <div className="flex flex-col gap-2">
         </div>
       </div>
+
 
       <div className="flex flex-col gap-2 p-4 dashed-border dashed-border-no-top">
         <div

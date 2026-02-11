@@ -65,7 +65,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "abelha-system",
+    slug: "another-project",
     title: "Abelha System",
     description: "System developed for updating and optimizing real estate tables.",
     longDescription: [
@@ -121,7 +121,7 @@ export const projects: Project[] = [
     ],
     screenshot: "/static/images/sds.png",
     github: undefined,
-    website: "https://sds-wiki.vercel.app/",
+    website: undefined,
     status: "live",
     stack: [
       { name: "Astro", href: "https://astro.build" },
