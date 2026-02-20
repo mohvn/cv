@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ChevronLeft, ExternalLink, FileText, Github, Globe } from "lucide-react";
 import { getProjectBySlug, projects, type ProjectStatus } from "@/lib/projects";
+import { assetPath } from "@/lib/base-path";
 import { DotPattern } from "@/components/ui/dot-pattern";
 
 export function generateStaticParams() {
@@ -83,7 +84,7 @@ export default async function ProjectPage({
               {project.buildingGif ? (
                 <Image
                   alt={project.title}
-                  src={project.buildingGif}
+                  src={project.buildingGif.startsWith("/") ? assetPath(project.buildingGif) : project.buildingGif}
                   width={1000}
                   height={1000}
                   className="w-full object-cover md:h-[340px] h-[200px] rounded-[8px] border border-gray-300"
@@ -92,7 +93,7 @@ export default async function ProjectPage({
               ) : (
                 <Image
                   alt={project.title}
-                  src={project.screenshot}
+                  src={assetPath(project.screenshot)}
                   width={1000}
                   height={1000}
                   className="w-full object-cover md:h-[340px] h-[200px] rounded-[8px] border border-gray-300"

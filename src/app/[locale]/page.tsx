@@ -23,6 +23,7 @@ import { UilLinux } from "@/components/icons/linux";
 import { ExperienceCard } from "@/components/experience-card";
 import { ProjectCard } from "@/components/project-card";
 import { getTranslations, isValidLocale, locales, type Locale } from "@/i18n";
+import { assetPath } from "@/lib/base-path";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -156,7 +157,7 @@ export default async function LocalePage({
       </div>
 
       <ExperienceCard
-        logo="/static/images/empreender_logo.jpg"
+        logo={assetPath("/static/images/empreender_logo.jpg")}
         company={t.experiences.empreender.company}
         role={t.experiences.empreender.role}
         period={t.experiences.empreender.period}
@@ -167,7 +168,7 @@ export default async function LocalePage({
       />
 
       <ExperienceCard
-        logo="/static/images/botslab_logo.jpg"
+        logo={assetPath("/static/images/botslab_logo.jpg")}
         company={t.experiences.botslab.company}
         role={t.experiences.botslab.role}
         period={t.experiences.botslab.period}
@@ -177,7 +178,7 @@ export default async function LocalePage({
       />
 
       <ExperienceCard
-        logo="/static/images/logo-freelancer.png"
+        logo={assetPath("/static/images/logo-freelancer.png")}
         company={t.experiences.freelancer.company}
         role={t.experiences.freelancer.role}
         period={t.experiences.freelancer.period}
@@ -198,7 +199,7 @@ export default async function LocalePage({
             description={t.projects[slug].description}
             href={projectSlugToHref[slug] ?? "#"}
             status={projectSlugToStatus[slug] ?? "live"}
-            screenshot={projectSlugToScreenshot[slug]}
+            screenshot={assetPath(projectSlugToScreenshot[slug] ?? "")}
             comingSoon={false}
             statusLabel={t.status[projectSlugToStatus[slug] ?? "live"]}
           />
