@@ -22,8 +22,12 @@ import { SolarFigmaBold } from "@/components/icons/figma";
 import { UilLinux } from "@/components/icons/linux";
 import { ExperienceCard } from "@/components/experience-card";
 import { ProjectCard } from "@/components/project-card";
-import { getTranslations, isValidLocale, type Locale } from "@/i18n";
+import { getTranslations, isValidLocale, locales, type Locale } from "@/i18n";
 import type { Metadata } from "next";
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({
   params,
