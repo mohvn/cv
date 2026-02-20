@@ -81,13 +81,13 @@ export default async function ProjectPage({
           <div className="w-full">
             <div className="w-full h-full md:min-h-[340px] min-h-[200px] rounded-[12px] relative border border-gray-300 p-[4px] overflow-hidden">
               {project.buildingGif ? (
-                <img
+                <Image
                   alt={project.title}
-                  loading="lazy"
+                  src={project.buildingGif}
                   width={1000}
                   height={1000}
                   className="w-full object-cover md:h-[340px] h-[200px] rounded-[8px] border border-gray-300"
-                  src={project.buildingGif}
+                  loading="lazy"
                 />
               ) : (
                 <Image

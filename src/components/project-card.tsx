@@ -9,6 +9,7 @@ interface ProjectCardProps {
   description: string;
   href: string;
   status?: "building" | "live" | "comingSoon" | "private";
+  statusLabel?: string;
   screenshot?: string;
   comingSoon?: boolean;
 }
@@ -18,6 +19,7 @@ export function ProjectCard({
   description,
   href,
   status = "live",
+  statusLabel,
   screenshot,
   comingSoon = false,
 }: ProjectCardProps) {
@@ -45,6 +47,7 @@ export function ProjectCard({
   };
 
   const config = statusConfig[status || "live"];
+  const displayLabel = statusLabel ?? config.label;
 
   return (
     <div className="relative z-10 p-3">
@@ -99,7 +102,7 @@ export function ProjectCard({
                   </svg>
                 </div>
               )}
-              <p className="text-sm text-gray-500 font-medium">{config.label}</p>
+              <p className="text-sm text-gray-500 font-medium">{displayLabel}</p>
             </div>
           </div>
           <p className="text-sm text-gray-500">{description}</p>
