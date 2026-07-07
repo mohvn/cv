@@ -46,16 +46,16 @@ export const RESUME_DATA: ResumeData = {
     {
       company: "Empreender",
       link: "https://www.linkedin.com/company/empreender",
-      badges: ["Remote", "React", "Next.js", "Tailwind CSS", "SEO"],
+      badges: ["Remote", "React", "Next.js", "TypeScript", "Tailwind CSS"],
       title: "Frontend Developer",
       start: "2024",
       end: null,
       description:
-        "Develop and maintain the company's apps using React, Next.js, and Tailwind CSS.",
+        "Lead front-end development on high-impact products including OVNI, Rastreio.net, and Area do Cli, powering thousands of e-commerce stores on Shopify and Nuvemshop.",
       highlights: [
-        "Implemented responsive design and cross-browser compatibility",
-        "Collaborated with the design team to implement new features and improve UX",
-        "Optimized apps for SEO and performance",
+        "Build modern, responsive, and scalable interfaces with React, Next.js, TypeScript, and Tailwind CSS alongside Product and Design teams",
+        "Optimize SEO and Core Web Vitals to improve engagement and conversion across the platform",
+        "Establish code standards and best practices to ensure consistency and maintainability",
       ],
     },
     {
@@ -66,26 +66,26 @@ export const RESUME_DATA: ResumeData = {
       start: "2024",
       end: "2026",
       description:
-        "Automated third-party systems and purchasing workflows using Python-based RPA solutions.",
+        "Develop automation and integration solutions for corporate procurement platforms, connecting third-party systems to Nimbi and Mercado Eletrônico portals.",
       highlights: [
-        "Automated McCain and SMSGroup integrations in Nimbi and Mercado Eletrônico platforms",
-        "Developed and maintained automation solutions for purchasing systems",
-        "Built RPA bots with Python, Selenium, and Robot Framework to reduce manual work",
+        "Architected, implemented, and maintained RPA bots using Python, Selenium, and automation tools",
+        "Automated workflows between McCain, SMSGroup, and procurement portals to eliminate repetitive manual tasks",
+        "Identified continuous improvement opportunities to evolve and scale delivered solutions",
       ],
     },
     {
       company: "Freelancer",
       link: "https://mohvn.github.io/portfolio/en",
-      badges: ["Remote", "Next.js", "Astro", "React", "PHP", "WordPress"],
+      badges: ["Remote", "Next.js", "Tailwind CSS", "Node.js", "Bun"],
       title: "Full Stack Developer",
       start: "2022",
       end: null,
       description:
-        "Deliver end-to-end web solutions for clients, from design to deployment.",
+        "Architect and deliver modern, scalable web applications across market segments using Next.js, Tailwind CSS, Node.js, and Bun.",
       highlights: [
-        "Built custom websites and web applications with Next.js, Astro, and modern web technologies",
-        "Implemented responsive designs optimized for performance and SEO",
-        "Developed backend systems in PHP and integrated WordPress when needed",
+        "Develop responsive, high-performance interfaces integrated with external services and third-party APIs",
+        "Drive performance, SEO, accessibility, and UX optimization across client projects",
+        "Define development best practices, code structure, and process improvements for robust digital products",
       ],
     },
   ],
